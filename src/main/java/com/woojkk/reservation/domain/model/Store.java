@@ -16,23 +16,23 @@ import javax.persistence.Id;
 @Builder
 @Entity
 @AuditOverride(forClass = BaseEntity.class)
-public class Manager extends BaseEntity{
+public class Store extends BaseEntity{
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String name;
+    private String location;
+    private String storeInfo;
+    private String registrationNumber;
 
-    private String password;
 
-    private String email;
-
-
-    public static Manager from(SignUpForm form) {
-        return Manager.builder()
+    public static Store from(RegistrationForm form) {
+        return Store.builder()
                 .name(form.getName())
-                .password(form.getPassword())
-                .email(form.getEmail())
+                .location(form.getLocation())
+                .storeInfo(form.getLocation())
+                .registrationNumber(form.getRegistrationNumber())
                 .build();
     }
 }

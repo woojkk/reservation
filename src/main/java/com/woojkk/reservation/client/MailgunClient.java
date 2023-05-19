@@ -1,5 +1,6 @@
-package com.woojkk.reservation.client.mailgun;
+package com.woojkk.reservation.client;
 
+import com.woojkk.reservation.client.mailgun.SendMailForm;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.cloud.openfeign.SpringQueryMap;

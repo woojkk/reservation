@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.Locale;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -21,5 +22,12 @@ public class ManagerSignService {
     public boolean isExistEmail(String email) {
         return managerRepository.findByEmail(email.toLowerCase(Locale.ROOT))
                 .isPresent();
+    }
+
+    public Optional<Manager> findValidCustomer(String email, String password) {
+        return managerRepository.findByEmail(email)
+                .stream().filter(
+                        manager -> manager.getPassword().equals(password)
+                ).findFirst();
     }
 }
