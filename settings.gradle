@@ -1,1 +1,5 @@
 rootProject.name = 'reservation'
+include 'reservation-domain'
+include 'user-api'
+include 'registration-api'
+
