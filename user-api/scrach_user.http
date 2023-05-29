@@ -1,0 +1,42 @@
+### 회원가입 (매장 관리자)
+POST http://localhost:9090/signup/manager
+Content-Type: application/json
+
+{
+  "birth": "2023-05-28",
+  "email": "woojkk0@gmail.com",
+  "name": "김우진",
+  "password": "6877",
+  "phone": "01012341234"
+}
+
+### 로그인 (관리자)
+POST http://localhost:9090/login/manager
+Content-Type: application/json
+
+{
+  "email": "woojkk0@gmail.com",
+  "password": "6877"
+}
+
+
+### 회원가입 (이용자)
+POST http://localhost:9090/signup/customer
+Content-Type: application/json
+
+{
+  "birth": "1989-02-08",
+  "email": "woojkk@naver.com",
+  "name": "이용자",
+  "password": "6877",
+  "phone": "01000000000"
+}
+
+### 로그인 (이용자)
+POST http://localhost:9090/login/customer
+Content-Type: application/json
+
+{
+  "email": "woojkk@naver.com",
+  "password": "6877"
+}

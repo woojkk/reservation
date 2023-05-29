@@ -17,10 +17,14 @@ public class LogInController {
     private final LogInApplication logInApplication;
 
     @PostMapping("/manager")
-    public ResponseEntity<String> signInManager(@RequestBody LogInForm form) {
-        return ResponseEntity.ok(logInApplication.ManagerLoginToken(form));
+    public ResponseEntity<String> logInManager(@RequestBody LogInForm form) {
+        return ResponseEntity.ok(logInApplication.managerLoginToken(form));
     }
 
+    @PostMapping("/customer")
+    public ResponseEntity<String> logInCustomer(@RequestBody LogInForm form) {
+        return ResponseEntity.ok(logInApplication.customerLoginToken(form));
+    }
 
 
 }

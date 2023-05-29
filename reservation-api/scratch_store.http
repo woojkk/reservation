@@ -1,0 +1,32 @@
+
+### 매장 등록
+POST http://localhost:9090/manager/store
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqbEhWc3JwZ2RxeW5RRUhVRkxtZ3lXdjVpako1M0tlb0dNZTVoa2lPc2RBPSIsImp0aSI6IlJucE8xSHd6NXo4WmhtWTZOUUphOVE9PSIsInJvbGVzIjoiTUFOQUdFUiIsImlhdCI6MTY4NTI4NDM1OSwiZXhwIjoxNjg1MzcwNzU5fQ.Uj2sOLlWUL4GQW6tu82U4dCX3UFm0OVVtkrZs8IOSX0
+
+{
+  "location": "서울시 강서구",
+  "name": "피씨방",
+  "registrationNumber": "811-04-10602",
+  "storeInfo": "피씨방입니다.",
+  "price": "2000"
+}
+
+### 매장 수정
+PUT http://localhost:9090/manager/store
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqbEhWc3JwZ2RxeW5RRUhVRkxtZ3lXdjVpako1M0tlb0dNZTVoa2lPc2RBPSIsImp0aSI6IlJucE8xSHd6NXo4WmhtWTZOUUphOVE9PSIsInJvbGVzIjoiTUFOQUdFUiIsImlhdCI6MTY4NTI4NDM1OSwiZXhwIjoxNjg1MzcwNzU5fQ.Uj2sOLlWUL4GQW6tu82U4dCX3UFm0OVVtkrZs8IOSX0
+
+{
+  "id": 2,
+  "location": "서울시 강서구",
+  "name": "코인 노래방",
+  "storeInfo": "코노입니다.",
+  "registrationNumber": "811-04-01601",
+  "price": 10000
+}
+
+### 매장 삭제
+DELETE http://localhost:9090/manager/store?id=2
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqbEhWc3JwZ2RxeW5RRUhVRkxtZ3lXdjVpako1M0tlb0dNZTVoa2lPc2RBPSIsImp0aSI6IlJucE8xSHd6NXo4WmhtWTZOUUphOVE9PSIsInJvbGVzIjoiTUFOQUdFUiIsImlhdCI6MTY4NTI4NDM1OSwiZXhwIjoxNjg1MzcwNzU5fQ.Uj2sOLlWUL4GQW6tu82U4dCX3UFm0OVVtkrZs8IOSX0

@@ -29,7 +29,7 @@ public class ManagerService {
                 .isPresent();
     }
 
-    public Optional<Manager> findValidCustomer(String email, String password) {
+    public Optional<Manager> findValidUser(String email, String password) {
         return managerRepository.findByEmail(email)
                 .stream().filter(
                         manager -> manager.getPassword().equals(password)

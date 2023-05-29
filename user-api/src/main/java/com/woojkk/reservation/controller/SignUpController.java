@@ -21,4 +21,9 @@ public class SignUpController {
     public ResponseEntity<String> managerSignUp(@RequestBody SignUpForm form) {
         return ResponseEntity.ok(signUpApplication.managerSignUp(form));
     }
+
+    @PostMapping("/customer")
+    public ResponseEntity<String> customerSignUp(@RequestBody SignUpForm form) {
+        return ResponseEntity.ok(signUpApplication.customerSignUp(form));
+    }
 }
