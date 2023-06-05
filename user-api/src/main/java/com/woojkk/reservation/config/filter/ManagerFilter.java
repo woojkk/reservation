@@ -1,8 +1,8 @@
 package com.woojkk.reservation.config.filter;
 
-import com.woojkk.domain.common.UserVo;
-import com.woojkk.domain.config.JwtAuthenticationProvider;
 import com.woojkk.reservation.service.ManagerService;
+import domain.common.UserVo;
+import domain.config.JwtAuthenticationProvider;
 import lombok.RequiredArgsConstructor;
 
 import javax.servlet.*;

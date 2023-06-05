@@ -1,6 +1,6 @@
 package com.woojkk.reservation.config;
 
-import com.woojkk.domain.config.JwtAuthenticationProvider;
+import domain.config.JwtAuthenticationProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

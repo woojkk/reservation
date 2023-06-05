@@ -2,11 +2,11 @@ package com.woojkk.reservation.domain.model;
 
 import lombok.*;
 import org.hibernate.envers.AuditOverride;
+import org.hibernate.envers.Audited;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -15,19 +15,25 @@ import javax.persistence.Id;
 @Builder
 @Entity
 @AuditOverride(forClass = BaseEntity.class)
+@Audited
 public class Store extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Long storeId;
     private String name;
     private String location;
     private String storeInfo;
     private String registrationNumber;
     private Long price;
 
-    public static Store of(AddStoreForm form) {
+
+
+
+    public static Store of(Long storeId,AddStoreForm form) {
         return Store.builder()
+                .storeId(storeId)
                 .name(form.getName())
                 .location(form.getLocation())
                 .storeInfo(form.getStoreInfo())

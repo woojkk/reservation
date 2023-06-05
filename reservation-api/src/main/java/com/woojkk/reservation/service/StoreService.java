@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
-public class StoreRegService {
+public class StoreService {
 
     private final StoreRepository storeRepository;
 
@@ -22,9 +22,9 @@ public class StoreRegService {
     }
 
     @Transactional
-    public Store addStore(AddStoreForm form) {
+    public Store addStore(Long storeId, AddStoreForm form) {
 
-        return storeRepository.save(Store.of(form));
+        return storeRepository.save(Store.of(storeId,form));
     }
 
     @Transactional

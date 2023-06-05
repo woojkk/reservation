@@ -1,8 +1,8 @@
 
 ### 매장 등록
-POST http://localhost:9090/manager/store
+POST http://localhost:9091/manager/store
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqbEhWc3JwZ2RxeW5RRUhVRkxtZ3lXdjVpako1M0tlb0dNZTVoa2lPc2RBPSIsImp0aSI6IlJucE8xSHd6NXo4WmhtWTZOUUphOVE9PSIsInJvbGVzIjoiTUFOQUdFUiIsImlhdCI6MTY4NTI4NDM1OSwiZXhwIjoxNjg1MzcwNzU5fQ.Uj2sOLlWUL4GQW6tu82U4dCX3UFm0OVVtkrZs8IOSX0
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqbEhWc3JwZ2RxeW5RRUhVRkxtZ3lXdjVpako1M0tlb0dNZTVoa2lPc2RBPSIsImp0aSI6IlJucE8xSHd6NXo4WmhtWTZOUUphOVE9PSIsInJvbGVzIjoiTUFOQUdFUiIsImlhdCI6MTY4NTQ0NDIzMiwiZXhwIjoxNjg1NTMwNjMyfQ.06nL2Yz0ouMxryRmF4v3Sa737ejClDAC_AhnJiPO_sk
 
 {
   "location": "서울시 강서구",
@@ -13,12 +13,12 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqbEhWc3JwZ2RxeW5RRUhVRkxtZ3lXdjVpa
 }
 
 ### 매장 수정
-PUT http://localhost:9090/manager/store
+PUT http://localhost:9091/manager/store
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqbEhWc3JwZ2RxeW5RRUhVRkxtZ3lXdjVpako1M0tlb0dNZTVoa2lPc2RBPSIsImp0aSI6IlJucE8xSHd6NXo4WmhtWTZOUUphOVE9PSIsInJvbGVzIjoiTUFOQUdFUiIsImlhdCI6MTY4NTI4NDM1OSwiZXhwIjoxNjg1MzcwNzU5fQ.Uj2sOLlWUL4GQW6tu82U4dCX3UFm0OVVtkrZs8IOSX0
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqbEhWc3JwZ2RxeW5RRUhVRkxtZ3lXdjVpako1M0tlb0dNZTVoa2lPc2RBPSIsImp0aSI6IlJucE8xSHd6NXo4WmhtWTZOUUphOVE9PSIsInJvbGVzIjoiTUFOQUdFUiIsImlhdCI6MTY4NTQ0NDIzMiwiZXhwIjoxNjg1NTMwNjMyfQ.06nL2Yz0ouMxryRmF4v3Sa737ejClDAC_AhnJiPO_sk
 
 {
-  "id": 2,
+  "id": 1,
   "location": "서울시 강서구",
   "name": "코인 노래방",
   "storeInfo": "코노입니다.",
@@ -27,6 +27,11 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqbEhWc3JwZ2RxeW5RRUhVRkxtZ3lXdjVpa
 }
 
 ### 매장 삭제
-DELETE http://localhost:9090/manager/store?id=2
+DELETE http://localhost:9091/manager/store?id=2
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqbEhWc3JwZ2RxeW5RRUhVRkxtZ3lXdjVpako1M0tlb0dNZTVoa2lPc2RBPSIsImp0aSI6IlJucE8xSHd6NXo4WmhtWTZOUUphOVE9PSIsInJvbGVzIjoiTUFOQUdFUiIsImlhdCI6MTY4NTI4NDM1OSwiZXhwIjoxNjg1MzcwNzU5fQ.Uj2sOLlWUL4GQW6tu82U4dCX3UFm0OVVtkrZs8IOSX0
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqbEhWc3JwZ2RxeW5RRUhVRkxtZ3lXdjVpako1M0tlb0dNZTVoa2lPc2RBPSIsImp0aSI6IlJucE8xSHd6NXo4WmhtWTZOUUphOVE9PSIsInJvbGVzIjoiTUFOQUdFUiIsImlhdCI6MTY4NTQ0MDcwNSwiZXhwIjoxNjg1NTI3MTA1fQ.aWaI6kpiJhqfcXtfg6SnK5BgROQQXwlZQoIyovJR0J8
+
+### 매장 검색
+GET http://localhost:9091/search/store?name=코인
+Content-Type: application/json
+

@@ -26,4 +26,15 @@ public class StoreDto {
                 .price(store.getPrice())
                 .build();
     }
+//
+//    public static StoreDto withoutItemsFrom(Store store) {
+//        return StoreDto.builder()
+//                .id(store.getId())
+//                .name(store.getName())
+//                .location(store.getLocation())
+//                .storeInfo(store.getStoreInfo())
+//                .registrationNumber(store.getRegistrationNumber())
+//                .price(store.getPrice())
+//                .build();
+//    }
 }
